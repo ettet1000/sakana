@@ -32,12 +32,23 @@ const LOCALE_SRC = {
     date: "デート",
     home: "ホーム",
   },
+  "ko-KR": {
+    lang: "언어",
+    gyroscope: "자이로",
+    mute: "음소거",
+    magic: "자동",
+    weibo: "微博",
+    image: "그림",
+    program: "프로그램",
+    date: "데이트",
+    home: "첫 장",
+  },
 };
 const AVAIL_LANGS = Object.keys(LOCALE_SRC).sort();
 
 const locale = {
   get: () => {
-    let lang = "zh-CN";
+    let lang = "en-US";
     let paramLang = new URLSearchParams(location.search).get("lang");
     if (paramLang) {
       paramLang = paramLang.replace("_", "-");
